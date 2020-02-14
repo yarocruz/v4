@@ -1,5 +1,5 @@
 module.exports = {
-  siteTitle: 'Brittany Chiang | Software Engineer',
+  siteTitle: 'Yarosky Cruz | Front End Developer',
   siteDescription:
     'Brittany Chiang is a software engineer based in Boston, MA who specializes in developing (and occasionally designing) exceptional, high-quality websites and applications.',
   siteKeywords:
@@ -8,27 +8,19 @@ module.exports = {
   siteLanguage: 'en_US',
   googleAnalyticsID: 'UA-45666519-2',
   googleVerification: 'DCl7VAf9tcz6eD9gb67NfkNnJ1PKRNcg8qQiwpbx9Lk',
-  name: 'Brittany Chiang',
-  location: 'Boston, MA',
-  email: 'brittany.chiang@gmail.com',
-  github: 'https://github.com/bchiang7',
-  twitterHandle: '@bchiang7',
+  name: 'Yarosky Cruz',
+  location: 'Orlando, FL',
+  email: 'yarocruz@gmail.com',
+  github: 'https://github.com/yarocruz',
+  twitterHandle: '@JayCruz',
   socialMedia: [
     {
       name: 'GitHub',
-      url: 'https://github.com/bchiang7',
+      url: 'https://github.com/yarocruz',
     },
     {
       name: 'Linkedin',
-      url: 'https://www.linkedin.com/in/bchiang7',
-    },
-    {
-      name: 'Codepen',
-      url: 'https://codepen.io/bchiang7',
-    },
-    {
-      name: 'Instagram',
-      url: 'https://www.instagram.com/bchiang7',
+      url: 'https://www.linkedin.com/in/yarosky-cruz',
     },
     {
       name: 'Twitter',
@@ -42,11 +34,7 @@ module.exports = {
       url: '/#about',
     },
     {
-      name: 'Experience',
-      url: '/#jobs',
-    },
-    {
-      name: 'Work',
+      name: 'Projects',
       url: '/#projects',
     },
     {

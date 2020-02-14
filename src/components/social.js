@@ -21,7 +21,7 @@ const StyledList = styled.ul`
     width: 1px;
     height: 90px;
     margin: 0 auto;
-    background-color: ${colors.lightSlate};
+    background-color: ${colors.orange};
   }
 
   li:last-of-type {
@@ -29,6 +29,7 @@ const StyledList = styled.ul`
   }
 `;
 const StyledLink = styled.a`
+  color: ${colors.darkGrey};
   padding: 10px;
   &:hover,
   &:focus {

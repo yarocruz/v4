@@ -36,7 +36,7 @@ const StyledNav = styled.nav`
   ${mixins.flexBetween};
   position: relative;
   width: 100%;
-  color: ${colors.lightestSlate};
+  color: ${colors.darkNavy};
   font-family: ${fonts.SFMono};
   counter-reset: item 0;
   z-index: 12;
@@ -45,17 +45,17 @@ const StyledLogo = styled.div`
   ${mixins.flexCenter};
   a {
     display: block;
-    color: ${colors.green};
-    width: 42px;
-    height: 42px;
+    color: ${colors.darkGrey};
+    width: 62px;
+    height: 62px;
     &:hover,
     &:focus {
       svg {
-        fill: ${colors.transGreen};
+        fill: ${colors.darkGrey};
       }
     }
     svg {
-      fill: none;
+      fill: ${colors.darkNavy};
       transition: ${theme.transition};
       user-select: none;
     }
@@ -132,7 +132,7 @@ const StyledLink = styled.div`
   align-items: center;
   ${media.tablet`display: none;`};
 `;
-const StyledList = styled.ol`
+const StyledList = styled.ul`
   ${mixins.flexBetween};
   padding: 0;
   margin: 0;
@@ -142,9 +142,8 @@ const StyledListItem = styled.li`
   margin: 0 10px;
   position: relative;
   font-size: ${fontSizes.smish};
-  counter-increment: item 1;
+
   &:before {
-    content: '0' counter(item) '.';
     text-align: right;
     color: ${colors.green};
     font-size: ${fontSizes.xs};
@@ -279,9 +278,7 @@ class Nav extends Component {
                   navLinks &&
                   navLinks.map(({ url, name }, i) => (
                     <CSSTransition key={i} classNames={fadeDownClass} timeout={timeout}>
-                      <StyledListItem
-                        key={i}
-                        style={{ transitionDelay: `${isHome ? i * 100 : 0}ms` }}>
+                      <StyledListItem style={{ transitionDelay: `${isHome ? i * 100 : 0}ms` }}>
                         <StyledListLink to={url}>{name}</StyledListLink>
                       </StyledListItem>
                     </CSSTransition>

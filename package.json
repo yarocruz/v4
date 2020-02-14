@@ -5,7 +5,7 @@
   "author": "Brittany Chiang <brittany.chiang@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bchiang7/v4"
+    "url": "git+https://github.com/bchiang7/v4.git"
   },
   "keywords": [
     "gatsby"
@@ -77,5 +77,10 @@
     "husky": "^3.1.0",
     "lint-staged": "^9.5.0",
     "prettier": "^1.19.1"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/bchiang7/v4/issues"
+  },
+  "homepage": "https://github.com/bchiang7/v4#readme",
+  "main": "gatsby-browser.js"
 }

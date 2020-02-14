@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import sr from '@utils/sr';
@@ -22,25 +21,26 @@ const StyledTitle = styled.h4`
     display: block;
   }
 `;
-const StyledArchiveLink = styled(Link)`
-  ${mixins.inlineLink};
-  text-align: center;
-  margin: 0 auto;
-  font-family: ${fonts.SFMono};
-  font-size: ${fontSizes.sm};
-  &:after {
-    bottom: 0.1em;
-  }
-`;
+
 const StyledGrid = styled.div`
   margin-top: 50px;
 
   .projects {
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 15px;
     position: relative;
     ${media.desktop`grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));`};
+  }
+  .projects:not(:first-child) {
+    margin-left: -2rem;
+  }
+  .projects:not(:last-child):hover,
+  .projects:not(:last-child):focus-within {
+    transform: translateY(-1rem);
+    ~ .projects {
+      transform: translateX(2rem);
+    }
   }
 `;
 const StyledProjectInner = styled.div`
@@ -54,17 +54,33 @@ const StyledProjectInner = styled.div`
   border-radius: ${theme.borderRadius};
   transition: ${theme.transition};
   background-color: ${colors.lightNavy};
+  &:not(:first-child) {
+    margin-left: -2rem;
+  }
+  &:not(:last-child):hover,
+  &:not(:last-child):focus-within {
+    transform: translateY(-1rem);
+    ~ & {
+      transform: translateX(2rem);
+    }
+  }
 `;
 const StyledProject = styled.div`
   transition: ${theme.transition};
   cursor: default;
-  &:hover,
-  &:focus {
+  
     outline: 0;
-    ${StyledProjectInner} {
-      transform: translateY(-5px);
+    ${StyledProjectInner}:not(:first-child) {
+      margin-left: -2rem;
+      &:not(:last-child):hover,
+      &:not(:last-child):focus-within {
+        transform: translateY(-1rem);
+        ~ & {
+          transform: translateX(2rem);
+        }
     }
-  }
+    
+  
 `;
 const StyledProjectHeader = styled.div`
   ${mixins.flexBetween};
@@ -145,10 +161,10 @@ const Projects = ({ data }) => {
 
   return (
     <StyledContainer>
-      <StyledTitle ref={revealTitle}>Other Noteworthy Projects</StyledTitle>
-      <StyledArchiveLink to="/archive" ref={revealArchiveLink}>
+      <StyledTitle ref={revealTitle}>Projects</StyledTitle>
+      {/* <StyledArchiveLink to="/archive" ref={revealArchiveLink}>
         view the archive
-      </StyledArchiveLink>
+      </StyledArchiveLink> */}
 
       <StyledGrid>
         <TransitionGroup className="projects">

@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
-import { Layout, Hero, About, Jobs, Featured, Projects, Contact } from '@components';
+import { Layout, Hero, About, Projects, Contact } from '@components';
 import styled from 'styled-components';
 import { Main } from '@styles';
 
@@ -14,8 +14,8 @@ const IndexPage = ({ location, data }) => (
     <StyledMainContainer className="fillHeight">
       <Hero data={data.hero.edges} />
       <About data={data.about.edges} />
-      <Jobs data={data.jobs.edges} />
-      <Featured data={data.featured.edges} />
+      {/* <Jobs data={data.jobs.edges} />
+      <Featured data={data.featured.edges} /> */}
       <Projects data={data.projects.edges} />
       <Contact data={data.contact.edges} />
     </StyledMainContainer>
@@ -51,7 +51,7 @@ export const pageQuery = graphql`
             title
             avatar {
               childImageSharp {
-                fluid(maxWidth: 700, quality: 90, traceSVG: { color: "#64ffda" }) {
+                fluid(maxWidth: 700, quality: 90, traceSVG: { color: "#333" }) {
                   ...GatsbyImageSharpFluid_withWebp_tracedSVG
                 }
               }
@@ -89,7 +89,7 @@ export const pageQuery = graphql`
             title
             cover {
               childImageSharp {
-                fluid(maxWidth: 700, quality: 90, traceSVG: { color: "#64ffda" }) {
+                fluid(maxWidth: 700, quality: 90, traceSVG: { color: "#333" }) {
                   ...GatsbyImageSharpFluid_withWebp_tracedSVG
                 }
               }

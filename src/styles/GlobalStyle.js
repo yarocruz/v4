@@ -29,7 +29,7 @@ const GlobalStyle = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     background-color: ${colors.navy};
-    color: ${colors.slate};
+    color: ${colors.darkNavy};
     line-height: 1.3;
     font-family: ${fonts.Calibre};
     font-size: ${fontSizes.xl};
@@ -67,7 +67,7 @@ const GlobalStyle = createGlobalStyle`
   h5,
   h6 {
     font-weight: 600;
-    color: ${colors.lightestSlate};
+    color: ${colors.darkNavy};
     margin: 0 0 10px 0;
   }
 
@@ -115,7 +115,7 @@ const GlobalStyle = createGlobalStyle`
 
     &:hover,
     &:focus {
-      color: ${colors.green};
+      color: ${colors.darkGrey};
     }
   }
 
